@@ -92,7 +92,7 @@
 
   - name: Loki | Configuring settings file
     template:
-      src: "templates/config-loki.yml.j2"
+      src: "{{ loki_config_template }}"
       dest: "{{ loki_config_dir }}/config.yml"
       owner: "root"
       group: "{{ loki_group }}"
